@@ -101,20 +101,29 @@
     /* ── PAGE HERO ── */
     .page-hero {
       background: #9CA7D1;
-      padding: 70px 40px 0;
-      text-align: center;
+      padding: 0;
+      display: flex;
       position: relative;
       overflow: hidden;
     }
 
-    .page-hero h1, .page-hero p { position: relative; z-index: 1; }
-    .page-hero p { padding-bottom: 60px; }
+    .page-hero-inner {
+      max-width: 1060px;
+      margin: 0 auto;
+      padding: 0 40px;
+      display: flex;
+      align-items: stretch;
+      min-height: 240px;
+      width: 100%;
+    }
+    .page-hero-content { flex: 1; padding: 44px 0 36px; }
+    .page-hero-illus { flex: 0 0 280px; display: flex; align-items: flex-end; justify-content: center; }
+    .page-hero-illus img { height: 240px; object-fit: contain; display: block; }
 
-
-    .page-hero h1 { font-size: 2.8rem; color: white; margin-bottom: 14px; position: relative; }
+    .page-hero h1 { font-size: 2.2rem; color: white; margin-bottom: 14px; }
 
     .page-hero p {
-      font-size: 1.1rem;
+      font-size: 0.95rem;
       color: rgba(255,255,255,0.92);
       max-width: 500px;
       margin: 0 auto;
@@ -340,7 +349,8 @@
     /* ── RESPONSIVE ── */
     @media (max-width: 768px) {
       nav { padding: 0 20px; }
-      .page-hero { padding: 50px 24px 44px; }
+      .page-hero-inner { padding: 44px 24px; flex-direction: column; }
+      .page-hero-illus { display: none; }
       .page-hero h1 { font-size: 2rem; }
       .contact-wrap { grid-template-columns: 1fr; padding: 50px 24px; gap: 40px; }
       .instagram-strip, .edu-banner { padding: 50px 24px; }
@@ -368,9 +378,15 @@
 
 <!-- HERO -->
 <section class="page-hero">
-  <img src="illus-use-contact-page.png" alt="" style="position:absolute;bottom:-6px;left:120px;height:270px;object-fit:contain;pointer-events:none;display:block;" />
-  <h1>Say Hello!</h1>
-  <p>Have a question about Little Dude, an order, a media opportunity or something else? I'd love to hear from you.</p>
+  <div class="page-hero-inner">
+    <div class="page-hero-content">
+      <h1>Say Hello!</h1>
+      <p>Have a question about Little Dude, an order, a media opportunity or something else? I'd love to hear from you.</p>
+    </div>
+    <div class="page-hero-illus">
+      <img src="illus-use-contact-page.png" alt="" />
+    </div>
+  </div>
 </section>
 
 <!-- CONTACT FORM + SIDEBAR -->
