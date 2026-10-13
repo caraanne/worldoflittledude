@@ -1,1 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — Big World of Little Dude</title>
+  <meta name="description" content="Meet Cara Zelas and Little Dude — the story behind Big World of Little Dude." />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --cream: #FFFCED;
+      --teal-blue: #7EBEC9;
+      --teal-green: #4AA694;
+      --dusty-navy: #587792;
+      --brown: #5C4226;
+      --golden: #FCB626;
+      --mauve: #BF73A5;
+      --blush: #FBB5B3;
+      --coral: #F44933;
+      --olive: #BFB31A;
+      --terracotta: #D9856B;
+      --periwinkle: #9CA7D1;
+    }
 
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Nunito Sans', sans-serif;
+      background: var(--cream);
+      color: #222;
+      font-size: 16px;
+      line-height: 1.65;
+    }
+
+    h1, h2, h3, h4 { font-family: 'Nunito', sans-serif; font-weight: 900; color: var(--teal-green); }
+
+    a { text-decoration: none; }
+
+    /* ── NAV ── */
+    nav {
+      background: var(--cream);
+      border-bottom: 2px solid var(--teal-blue);
+      padding: 0 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      height: 68px;
+    }
+
+    .nav-logo img { height: 64px; width: auto; display: block; }
+
+    .nav-links {
+      display: flex;
+      gap: 26px;
+      list-style: none;
+      align-items: center;
+    }
+
+    .nav-links a {
+      font-family: 'Nunito', sans-serif;
+      font-weight: 700;
+      font-size: 0.93rem;
+      color: #222;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--teal-green); }
+    .nav-links a.active { color: var(--teal-green); }
+
+    .nav-cta {
+      background: var(--coral) !important;
+      color: white !important;
+      padding: 9px 22px;
+      border-radius: 50px;
+      transition: background 0.2s, transform 0.2s !important;
+    }
+
+    .nav-cta:hover { background: #c5321e !important; color: white !important; transform: translateY(-1px); }
+
+    /* ── BUTTONS ── */
+    .btn {
+      display: inline-block;
+      padding: 13px 30px;
+      border-radius: 50px;
+      font-family: 'Nunito', sans-serif;
+      font-weight: 900;
+      font-size: 0.95rem;
+      transition: transform 0.2s, box-shadow 0.2s;
+      cursor: pointer;
+      border: none;
+      text-align: center;
+    }
+    .btn:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(0,0,0,0.15); }
+    .btn-teal { background: var(--teal-green); color: white; }
+    .btn-golden { background: var(--golden); color: var(--brown); }
+    .btn-coral { background: var(--coral); color: white; }
+
+    /* ── HERO — matches homepage style ── */
+    .page-hero {
+      background: var(--cream);
+      padding: 60px 40px 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: flex-end;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .page-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(circle, var(--teal-blue) 2px, transparent 2px),
+        radial-gradient(circle, var(--mauve) 2px, transparent 2px),
+        radial-gradient(circle, var(--golden) 2px, transparent 2px);
+      background-size: 180px 180px, 220px 220px, 160px 160px;
+      background-position: 30px 40px, 100px 120px, 60px 160px;
+      opacity: 0.3;
+      pointer-events: none;
+    }
+
+    .hero-text {
+      padding-bottom: 50px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-label {
+      display: inline-block;
+      background: var(--periwinkle);
+      color: white;
+      font-family: 'Nunito', sans-serif;
+      font-weight: 700;
+      font-size: 0.82rem;
+      padding: 5px 16px;
+      border-radius: 50px;
+      margin-bottom: 18px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .page-hero h1 {
+      font-size: 2.6rem;
+      line-height: 1.15;
+      color: var(--teal-green);
+      margin-bottom: 18px;
+    }
+
+    .page-hero .lead {
+      font-size: 1.05rem;
+      color: #222;
+      margin-bottom: 28px;
+      line-height: 1.7;
+      max-width: 480px;
+    }
+
+    .hero-image-col {
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-img-box {
+      width: 100%;
+      max-height: 420px;
+      border-radius: 20px 20px 0 0;
+      overflow: hidden;
+      background: rgba(126,190,201,0.12);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 340px;
+    }
+
+    .hero-img-box img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+    .img-placeholder {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      color: var(--dusty-navy);
+      opacity: 0.45;
+      font-family: 'Nunito', sans-serif;
+      font-weight: 700;
+      font-size: 0.85rem;
+      padding: 40px;
+      text-align: center;
+      width: 100%;
+      min-height: 340px;
+    }
+
+    .img-placeholder svg { width: 48px; height: 48px; }
+
+    /* ── INTRO ── */
+    .intro-section {
+      padding: 70px 40px;
+      max-width: 820px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .intro-section p {
+      font-size: 1.1rem;
+      color: #222;
+      margin-bottom: 18px;
+      line-height: 1.8;
+    }
+
+    .intro-section p:last-child { margin-bottom: 0; }
+
+    /* ── ABOUT CARA — navy bg like story section on homepage ── */
+    .cara-section {
+      background: var(--dusty-navy);
+      padding: 80px 40px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cara-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+      max-width: 1060px;
+      margin: 0 auto;
+    }
+
+    .cara-img {
+      border-radius: 20px;
+      overflow: hidden;
+      min-height: 400px;
+      background: rgba(255,255,255,0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .cara-img img { width: 100%; border-radius: 20px; object-fit: cover; display: block; }
+
+    .cara-text .section-tag {
+      display: inline-block;
+      background: var(--golden);
+      color: var(--brown);
+      font-family: 'Nunito', sans-serif;
+      font-weight: 700;
+      font-size: 0.8rem;
+      padding: 4px 14px;
+      border-radius: 50px;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .cara-text h2 { font-size: 2rem; color: white; margin-bottom: 20px; }
+
+    .cara-text p {
+      font-size: 1rem;
+      color: rgba(255,255,255,0.88);
+      margin-bottom: 16px;
+      line-height: 1.8;
+    }
+
+    .cara-text p:last-child { margin-bottom: 0; }
+
+    /* ── LITTLE DUDE SECTION ── */
+    .littledude-section {
+      background: var(--cream);
+      padding: 80px 40px 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .littledude-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: flex-end;
+      max-width: 1060px;
+      margin: 0 auto;
+    }
+
+    .littledude-copy { padding-bottom: 60px; }
+
+    .littledude-copy .section-tag {
+      display: inline-block;
+      background: var(--blush);
+      color: var(--brown);
+      font-family: 'Nunito', sans-serif;
+      font-weight: 700;
+      font-size: 0.8rem;
+      padding: 4px 14px;
+      border-radius: 50px;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .littledude-copy h2 { font-size: 2rem; margin-bottom: 6px; }
+
+    .littledude-copy .sub-line {
+      font-size: 1rem;
+      color: var(--terracotta);
+      font-family: 'Nunito', sans-serif;
+      font-weight: 700;
+      margin-bottom: 20px;
+      display: block;
+    }
+
+    .littledude-copy p {
+      font-size: 1rem;
+      color: #222;
+      margin-bottom: 16px;
+      line-height: 1.8;
+    }
+
+    .lesson-list {
+      background: white;
+      border-radius: 20px;
+      padding: 28px 32px;
+      margin: 20px 0;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    }
+
+    .lesson-list h4 {
+      font-size: 0.78rem;
+      color: var(--teal-green);
+      margin-bottom: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .lesson-list ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+
+    .lesson-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 0.94rem;
+      color: #222;
+      line-height: 1.5;
+    }
+
+    .lesson-dot {
+      width: 9px; height: 9px;
+      border-radius: 50%;
+      background: var(--teal-blue);
+      flex-shrink: 0;
+      margin-top: 6px;
+    }
+
+    /* illustration sits at bottom of its column */
+    .illus-col {
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+    }
+
+    .illus-col img { max-height: 340px; object-fit: contain; display: block; }
+
+    /* ── NINE THEMES SECTION ── */
+    .themes-section {
+      background: var(--periwinkle);
+      padding: 70px 40px;
+    }
+
+    .themes-section h2 { text-align: center; color: white; font-size: 2rem; margin-bottom: 8px; }
+
+    .themes-sub {
+      text-align: center;
+      color: rgba(255,255,255,0.9);
+      font-size: 1rem;
+      margin-bottom: 40px;
+    }
+
+    .nine-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      max-width: 860px;
+      margin: 0 auto 36px;
+    }
+
+    .nine-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      text-align: center;
+    }
+
+    .nine-card h3 {
+      font-size: 0.95rem;
+      color: white;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+      margin: 0;
+    }
+
+    .themes-cta { text-align: center; }
+
+    /* ── CLOSING ── */
+    .closing-section {
+      background: var(--teal-green);
+      padding: 80px 40px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .closing-section h2 { color: white; font-size: 2.2rem; margin-bottom: 16px; }
+
+    .closing-section p {
+      color: rgba(255,255,255,0.92);
+      font-size: 1.05rem;
+      max-width: 720px;
+      margin: 0 auto 28px;
+      line-height: 1.75;
+    }
+
+    .illus-closing {
+      position: absolute;
+      bottom: 0;
+      right: 60px;
+      height: 260px;
+      pointer-events: none;
+    }
+
+    /* ── EDUCATORS BANNER ── */
+    .edu-banner {
+      background: var(--olive);
+      padding: 56px 40px;
+      text-align: center;
+    }
+
+    .edu-tag {
+      display: inline-block;
+      background: var(--teal-green);
+      color: white;
+      font-family: 'Nunito', sans-serif;
+      font-weight: 700;
+      font-size: 0.8rem;
+      padding: 4px 14px;
+      border-radius: 50px;
+      margin-bottom: 14px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .edu-banner h2 { font-size: 1.9rem; color: var(--dusty-navy); margin-bottom: 10px; }
+
+    .edu-banner p {
+      color: #222;
+      font-size: 1rem;
+      margin-bottom: 24px;
+      max-width: 680px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--cream);
+      border-top: 2px solid var(--teal-blue);
+      padding: 46px 40px 24px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 40px;
+      max-width: 960px;
+      margin: 0 auto 32px;
+    }
+
+    .footer-logo img { height: 56px; margin-bottom: 12px; }
+    .footer-brand p { font-size: 0.86rem; color: #222; line-height: 1.65; margin-bottom: 12px; }
+
+    .footer-brand .tagline {
+      font-family: 'Nunito', sans-serif;
+      font-weight: 900;
+      color: var(--teal-green);
+      font-size: 0.9rem;
+    }
+
+    .social-row { display: flex; gap: 10px; margin-top: 14px; }
+
+    .social-row a {
+      width: 38px; height: 38px;
+      border-radius: 50%;
+      background: var(--teal-blue);
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Nunito', sans-serif;
+      transition: background 0.2s, transform 0.2s;
+    }
+
+    .social-row a svg { width: 18px; height: 18px; fill: white; }
+
+    .social-row a:hover { background: var(--teal-green); transform: translateY(-2px); }
+
+    .footer-col h4 { font-size: 0.82rem; color: #222; text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 14px; }
+    .footer-col ul { list-style: none; }
+    .footer-col li { margin-bottom: 7px; }
+    .footer-col a { color: #222; font-size: 0.86rem; transition: color 0.2s; }
+    .footer-col a:hover { color: var(--teal-green); }
+
+    .footer-bottom {
+      text-align: center;
+      border-top: 1px solid rgba(126,190,201,0.3);
+      padding-top: 20px;
+      font-size: 0.8rem;
+      color: #222;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      nav { padding: 0 20px; }
+      .page-hero { grid-template-columns: 1fr; padding: 44px 24px 0; }
+      .page-hero h1 { font-size: 2rem; }
+      .hero-image-col { display: none; }
+      .hero-text { padding-bottom: 44px; }
+      .intro-section { padding: 50px 24px; }
+      .cara-inner, .littledude-inner { grid-template-columns: 1fr; gap: 36px; }
+      .cara-section, .littledude-section { padding: 50px 24px 0; }
+      .littledude-copy { padding-bottom: 0; }
+      .illus-col { display: none; }
+      .nine-grid { grid-template-columns: repeat(2, 1fr); }
+      .themes-section, .closing-section { padding: 50px 24px; }
+      .illus-closing { display: none; }
+      .footer-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo">
+    <img src="NEWlittledude-logo-TM-small.png" alt="Big World of Little Dude" />
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="shop.html">Shop</a></li>
+    <li><a href="about.html" class="active">About</a></li>
+    <li><a href="media.html">Media</a></li>
+    <li><a href="blog.html" target="_blank">Blog</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="shop.html" class="nav-cta">Shop Now</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="page-hero">
+  <div class="hero-text">
+    <span class="hero-label">About</span>
+    <h1>Hi, I'm Cara. And this is Little Dude.</h1>
+    <p class="lead" style="font-family:'Nunito',sans-serif; font-weight:900; font-size:1.2rem; color:var(--teal-green);">Not everything worth teaching fits on a report card.</p>
+    <p class="lead">How to make a friend. What to do with a big feeling. How to keep trying when something feels hard. How to be kind.</p>
+    <p class="lead" style="margin-bottom:0;">These are skills, too. And just like ABCs and 123s, we can teach them.</p>
+  </div>
+  <div class="hero-image-col">
+    <div class="hero-img-box">
+      <img src="hero-about.JPG" alt="Cara and Little Dude" style="width:100%;height:100%;object-fit:cover;object-position:center;" />
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT CARA -->
+<section class="cara-section">
+  <div class="cara-inner">
+    <div class="cara-img">
+      <img src="cara-about.JPG" alt="Cara Zelas" style="width:100%;height:100%;object-fit:cover;object-position:60% center;display:block;min-height:400px;border-radius:20px;" />
+    </div>
+    <div class="cara-text">
+      <span class="section-tag">A little about me</span>
+      <h2>I'm Cara Zelas.</h2>
+      <p>Early childhood educator, Montessori teacher, children's author and the creator of Big World of Little Dude.</p>
+      <p>I've spent my career working with young children in classrooms and communities, and I've seen the same thing again and again:</p>
+      <p>Little humans are expected to know how to share, listen, make friends, manage their feelings, respect someone's space and bounce back when things don't go their way.</p>
+      <p>But they're still learning how.</p>
+      <p>I created Big World of Little Dude to make those conversations easier — for children and the grown-ups helping them navigate their big world.</p>
+      <p>Through stories, characters and simple activities, Little Dude gives children a concrete way to explore some of life's biggest skills.</p>
+      <p>And the whole thing started with a very little dog.</p>
+    </div>
+  </div>
+</section>
+
+<!-- MEET LITTLE DUDE -->
+<section style="background:var(--dusty-navy); padding:80px 40px 0; position:relative; overflow:hidden;">
+  <img src="illus-cara-littledude-hugging.png" alt="" style="position:absolute; bottom:0; left:40px; height:280px; object-fit:contain; pointer-events:none; z-index:2;" />
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center; max-width:1060px; margin:0 auto;">
+    <div style="border-radius:20px; overflow:hidden; min-height:400px;">
+      <img src="little-dude-about.jpeg" alt="Little Dude" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;min-height:400px;" />
+    </div>
+    <div>
+      <span style="display:inline-block; background:var(--blush); color:var(--brown); font-family:'Nunito',sans-serif; font-weight:700; font-size:0.8rem; padding:4px 14px; border-radius:50px; margin-bottom:16px; text-transform:uppercase; letter-spacing:0.5px;">Meet Little Dude</span>
+      <h2 style="color:white; font-size:1.8rem; margin-bottom:16px;">A real dog with some very big lessons to share.</h2>
+      <p style="color:rgba(255,255,255,0.88); font-size:1rem; margin-bottom:16px; line-height:1.8;">Little Dude isn't just a character in a book. He's a real dog.</p>
+      <p style="color:rgba(255,255,255,0.88); font-size:1rem; margin-bottom:16px; line-height:1.8;">Little Dude and I became a certified therapy dog team and began volunteering together in hospitals, schools and classrooms. And I noticed something. Children opened up around him.</p>
+      <div class="lesson-list">
+        <h4>Little lessons from a little dog</h4>
+        <ul>
+          <li><span class="lesson-dot"></span>A conversation about personal space could become a conversation about giving a dog space.</li>
+          <li><span class="lesson-dot"></span>Gentle hands could become a lesson about respect.</li>
+          <li><span class="lesson-dot"></span>Waiting for Little Dude could teach patience.</li>
+          <li><span class="lesson-dot"></span>Noticing when he wanted to move away could start a conversation about boundaries and consent.</li>
+        </ul>
+      </div>
+      <p style="color:rgba(255,255,255,0.88); font-size:1rem; margin-top:16px; line-height:1.8;">Big ideas suddenly became concrete, playful and much easier for little humans to understand. That was the spark behind Big World of Little Dude.</p>
+    </div>
+  </div>
+</section>
+
+<!-- NINE THEMES -->
+<section class="themes-section">
+  <h2>Nine stories. Nine important skills.</h2>
+  <p class="themes-sub">Today, Little Dude helps children explore kindness, feelings, friendship and so much more — one adventure at a time.</p>
+  <div class="nine-grid">
+    <a href="shop.html#books" style="text-decoration:none;"><div class="nine-card"><img src="01-Kindness.png" alt="Kindness" style="width:140px;height:140px;object-fit:contain;" /><h3>Kindness</h3></div></a>
+    <a href="shop.html#books" style="text-decoration:none;"><div class="nine-card"><img src="02-Feelings.png" alt="Big Feelings" style="width:140px;height:140px;object-fit:contain;" /><h3>Big Feelings</h3></div></a>
+    <a href="shop.html#books" style="text-decoration:none;"><div class="nine-card"><img src="03-Manners.png" alt="Manners" style="width:140px;height:140px;object-fit:contain;" /><h3>Manners</h3></div></a>
+    <a href="shop.html#books" style="text-decoration:none;"><div class="nine-card"><img src="04-Empathy.png" alt="Empathy" style="width:140px;height:140px;object-fit:contain;" /><h3>Empathy</h3></div></a>
+    <a href="shop.html#books" style="text-decoration:none;"><div class="nine-card"><img src="05-Respect.png" alt="Respect" style="width:140px;height:140px;object-fit:contain;" /><h3>Respect</h3></div></a>
+    <a href="shop.html#books" style="text-decoration:none;"><div class="nine-card"><img src="06-Growth-Mindset.png" alt="Growth Mindset" style="width:140px;height:140px;object-fit:contain;" /><h3>Growth Mindset</h3></div></a>
+    <a href="shop.html#books" style="text-decoration:none;"><div class="nine-card"><img src="07-Friendship.png" alt="Friendship" style="width:140px;height:140px;object-fit:contain;" /><h3>Friendship</h3></div></a>
+    <a href="shop.html#books" style="text-decoration:none;"><div class="nine-card"><img src="08-Brain-Vacation.png" alt="Brain Vacation" style="width:140px;height:140px;object-fit:contain;" /><h3>Brain Vacation</h3></div></a>
+    <a href="shop.html#books" style="text-decoration:none;"><div class="nine-card"><img src="09-Courage.png" alt="Courage" style="width:140px;height:140px;object-fit:contain;" /><h3>Courage</h3></div></a>
+  </div>
+  <div class="themes-cta">
+    <a href="shop.html" class="btn btn-teal">Shop All 9 Books</a>
+  </div>
+</section>
+
+<!-- CLOSING -->
+<section class="closing-section">
+  <h2>We teach ABCs and 123s.<br>We can teach kindness, too.</h2>
+  <p>We spend so much time teaching children how to count, read, write and get ready for school. But knowing how to be with other people matters, too.</p>
+  <a href="shop.html" class="btn btn-golden">Shop the Books</a>
+  <img src="illus-littledude-reading-book.png" alt="" class="illus-closing" />
+</section>
+
+<!-- EDUCATORS BANNER -->
+<section class="edu-banner">
+  <span class="edu-tag">Are you an educator?</span>
+  <h2>Little Dude goes to school, too.</h2>
+  <p>Meet humanKIND Classroom, a nine-theme classroom program helping young children build social skills through stories, play and simple routines.</p>
+  <a href="https://humankindclassroom.com" target="_blank" class="btn btn-teal">Visit humanKIND Classroom</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <img src="far-left-corner.png" alt="" style="position:absolute;bottom:0;right:0;width:200px;pointer-events:none;transform:scaleX(-1);" />
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="footer-logo">
+        <img src="NEWlittledude-logo-TM-small.png" alt="Big World of Little Dude" />
+      </div>
+      <p>Created by Cara Zelas, early childhood educator, Montessori teacher and children's author. For little humans ages 3 to 7 and the grown-ups helping them navigate their big world.</p>
+      <p class="tagline">Be kind to all kinds.</p>
+      <div class="social-row">
+        <a href="https://www.instagram.com/worldoflittledude" target="_blank" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/carazelas" target="_blank" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+        <a href="https://humankindclassroom.com" target="_blank" aria-label="humanKIND Classroom">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="media.html">Media</a></li>
+        <li><a href="blog.html" target="_blank">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Shop</h4>
+      <ul>
+        <li><a href="shop.html#books">The Books</a></li>
+        <li><a href="shop.html#plush">Little Dude & Bird</a></li>
+        <li><a href="https://big-world-of-little-dude.printify.me/" target="_blank">Merch</a></li>
+        <li><a href="https://worldoflittledude.systeme.io/survival-kit" target="_blank">Parenting Survival Kit</a></li>
+        <li><a href="https://humankindclassroom.com" target="_blank">humanKIND Classroom</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Big World of Little Dude. Created by Cara Zelas. <a href="contact.html" style="color:var(--teal-green);">Contact</a></p>
+  </div>
+</footer>
+
+</body>
+</html>
