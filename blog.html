@@ -568,8 +568,25 @@
   <div class="newsletter-inner">
     <h2>Little Notes from Little Dude</h2>
     <p class="newsletter-desc">Simple parenting ideas, conversation starters, free activities and Little Dude updates, straight to your inbox.</p>
-    <div id="form-25811886"></div>
-    <script id="form-script-tag-25811886" src="https://worldoflittledude.systeme.io/public/remote/page/4574021655af72c1e1537f32f644c2376303003e.js"></script>
+    <form class="newsletter-form" onsubmit="submitSignup(event)">
+      <input type="text" id="signup-name" placeholder="First name" required />
+      <input type="email" id="signup-email" placeholder="Email address" required />
+      <button type="submit">Get the Free Pack!</button>
+    </form>
+    <p id="signup-success" style="display:none;color:white;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.95rem;margin-top:12px;">🎉 You're in! Check your inbox for your free Activity Pack.</p>
+    <script>
+      function submitSignup(e) {
+        e.preventDefault();
+        var name = document.getElementById('signup-name').value.trim();
+        var email = document.getElementById('signup-email').value.trim();
+        var formData = new FormData();
+        formData.append('email', email);
+        formData.append('first_name', name);
+        fetch('https://systeme.io/embedded/45740216/subscription', { method: 'POST', body: formData, mode: 'no-cors' });
+        e.target.style.display = 'none';
+        document.getElementById('signup-success').style.display = 'block';
+      }
+    </script>
     <p class="newsletter-note">No spam, ever. Just good stuff for little humans and the grown-ups who love them.</p>
   </div>
 </section>
