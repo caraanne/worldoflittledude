@@ -696,8 +696,30 @@
       <span class="section-label" style="background:rgba(88,119,146,0.15);color:var(--dusty-navy);">Free Download</span>
       <h2>Get the FREE Little Dude Activity Pack</h2>
       <p>Five fun printable activities to help your child explore feelings, friendship, kindness, courage and calm. Simple activities to print, play and explore together at home. Made for little humans ages 3 to 7.</p>
-      <div id="form-25815247"></div>
-      <script id="form-script-tag-25815247" src="https://worldoflittledude.systeme.io/public/remote/page/45749676d4eb6ee49f1bf769621c3cb5af4bc775.js"></script>
+      <!-- Hidden systeme.io form -->
+      <iframe name="systeme-hidden-shop" style="display:none;" title=""></iframe>
+      <form id="systeme-real-shop" method="post" action="https://systeme.io/embedded/45749676/subscription" target="systeme-hidden-shop" style="display:none;">
+        <input type="text" id="sys-shop-name" name="first_name" />
+        <input type="email" id="sys-shop-email" name="email" />
+        <button type="submit"></button>
+      </form>
+      <!-- Beautiful visible form -->
+      <form id="display-shop-form" onsubmit="submitShop(event)" style="display:flex;gap:10px;flex-wrap:wrap;">
+        <input type="text" id="shop-name" placeholder="First name" required style="flex:1;min-width:140px;padding:12px 18px;border-radius:50px;border:none;font-family:'Nunito Sans',sans-serif;font-size:0.9rem;outline:none;" />
+        <input type="email" id="shop-email" placeholder="Email address" required style="flex:1;min-width:180px;padding:12px 18px;border-radius:50px;border:none;font-family:'Nunito Sans',sans-serif;font-size:0.9rem;outline:none;" />
+        <button type="submit" style="background:var(--dusty-navy);color:white;border:none;padding:12px 26px;border-radius:50px;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.9rem;cursor:pointer;white-space:nowrap;">Get the Free Pack!</button>
+      </form>
+      <p id="shop-success" style="display:none;font-family:'Nunito',sans-serif;font-weight:700;color:var(--dusty-navy);margin-top:12px;">🎉 You're in! Check your inbox for your free Activity Pack.</p>
+      <script>
+        function submitShop(e) {
+          e.preventDefault();
+          document.getElementById('sys-shop-name').value = document.getElementById('shop-name').value;
+          document.getElementById('sys-shop-email').value = document.getElementById('shop-email').value;
+          document.getElementById('systeme-real-shop').submit();
+          document.getElementById('display-shop-form').style.display = 'none';
+          document.getElementById('shop-success').style.display = 'block';
+        }
+      </script>
     </div>
   </div>
 </div>

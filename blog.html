@@ -568,8 +568,30 @@
   <div class="newsletter-inner">
     <h2>Little Notes from Little Dude</h2>
     <p class="newsletter-desc">Simple parenting ideas, conversation starters, free activities and Little Dude updates, straight to your inbox.</p>
-    <div id="form-25815247"></div>
-    <script id="form-script-tag-25815247" src="https://worldoflittledude.systeme.io/public/remote/page/45749676d4eb6ee49f1bf769621c3cb5af4bc775.js"></script>
+    <!-- Hidden systeme.io form -->
+    <iframe name="systeme-hidden-blog" style="display:none;" title=""></iframe>
+    <form id="systeme-real-blog" method="post" action="https://systeme.io/embedded/45749676/subscription" target="systeme-hidden-blog" style="display:none;">
+      <input type="text" id="sys-blog-name" name="first_name" />
+      <input type="email" id="sys-blog-email" name="email" />
+      <button type="submit"></button>
+    </form>
+    <!-- Beautiful visible form -->
+    <form class="newsletter-form" id="display-blog-form" onsubmit="submitBlog(event)">
+      <input type="text" id="blog-name" placeholder="First name" required />
+      <input type="email" id="blog-email" placeholder="Email address" required />
+      <button type="submit">Get the Free Pack!</button>
+    </form>
+    <p id="blog-success" style="display:none;color:white;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.95rem;margin-top:12px;">🎉 You're in! Check your inbox for your free Activity Pack.</p>
+    <script>
+      function submitBlog(e) {
+        e.preventDefault();
+        document.getElementById('sys-blog-name').value = document.getElementById('blog-name').value;
+        document.getElementById('sys-blog-email').value = document.getElementById('blog-email').value;
+        document.getElementById('systeme-real-blog').submit();
+        document.getElementById('display-blog-form').style.display = 'none';
+        document.getElementById('blog-success').style.display = 'block';
+      }
+    </script>
     <p class="newsletter-note">No spam, ever. Just good stuff for little humans and the grown-ups who love them.</p>
   </div>
 </section>
