@@ -1012,8 +1012,28 @@
   <h2>Little Notes from Little Dude</h2>
   <p class="s-sub">Simple parenting ideas, free activities and Little Dude updates, straight to your inbox.</p>
   <p class="s-offer">Plus, get the FREE Little Dude Activity Pack when you sign up.<br/><span style="font-weight:400; font-size:0.88rem; opacity:0.85;">5 printable activities for little humans ages 3 to 7.</span></p>
-  <div id="form-25815247" style="max-width:480px;margin:0 auto;"></div>
-  <script id="form-script-tag-25815247" src="https://worldoflittledude.systeme.io/public/remote/page/45749676d4eb6ee49f1bf769621c3cb5af4bc775.js"></script>
+  <iframe name="systeme-hidden-home" style="display:none;" title=""></iframe>
+  <form id="systeme-real-home" method="post" action="https://systeme.io/embedded/45749676/subscription" target="systeme-hidden-home" style="display:none;">
+    <input type="text" id="sys-home-name" name="first_name" />
+    <input type="email" id="sys-home-email" name="email" />
+    <button type="submit"></button>
+  </form>
+  <form id="display-home-form" class="s-form" onsubmit="submitHome(event)">
+    <input type="text" id="home-name" placeholder="First name" required />
+    <input type="email" id="home-email" placeholder="Email address" required />
+    <button type="submit">Send Me Little Notes</button>
+  </form>
+  <p id="home-success" style="display:none;font-family:'Nunito',sans-serif;font-weight:700;color:white;margin-top:12px;">🎉 You're in! Check your inbox for your free Activity Pack.</p>
+  <script>
+    function submitHome(e) {
+      e.preventDefault();
+      document.getElementById('sys-home-name').value = document.getElementById('home-name').value;
+      document.getElementById('sys-home-email').value = document.getElementById('home-email').value;
+      document.getElementById('systeme-real-home').submit();
+      document.getElementById('display-home-form').style.display = 'none';
+      document.getElementById('home-success').style.display = 'block';
+    }
+  </script>
 </section>
 
 <!-- EDUCATORS BANNER — Olive -->
