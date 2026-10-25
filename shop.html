@@ -118,7 +118,10 @@
       border: 1px solid rgba(255,255,255,0.35);
       border-radius: 50px;
       padding: 5px 14px;
+      text-decoration: none;
+      transition: background 0.2s;
     }
+    a.hero-pill:hover { background: rgba(255,255,255,0.35); }
 
     /* ── SECTION WRAPPER ── */
     .section-wrap {
@@ -554,10 +557,10 @@
       <h1>Everything in Little Dude's World</h1>
       <p>Books, toys and resources to help little humans learn some of life's biggest skills. For ages 3 to 7.</p>
       <div class="hero-pills">
-        <span class="hero-pill">Books</span>
-        <span class="hero-pill">Plush</span>
-        <span class="hero-pill">Merch</span>
-        <span class="hero-pill">Parenting Resources</span>
+        <a href="#books" class="hero-pill">Books</a>
+        <a href="#plush" class="hero-pill">Plush</a>
+        <a href="#merch" class="hero-pill">Merch</a>
+        <a href="#resources" class="hero-pill">Parenting Resources</a>
       </div>
     </div>
     <div class="page-hero-illus">
@@ -567,7 +570,7 @@
 </section>
 
 <!-- COMPLETE COLLECTION (HERO PRODUCT) -->
-<div class="section-wrap">
+<div id="books" class="section-wrap">
   <div class="hero-product">
     <div class="hero-product-img">
       <img src="books-shop-new.jpg" alt="The Complete Little Dude Collection" />
@@ -602,7 +605,7 @@
 <hr class="section-divider" />
 
 <!-- BRAVE LITTLE HUMAN HARDCOVER COLLECTION -->
-<div class="section-wrap" style="padding-top:50px;">
+<div id="hardcover" class="section-wrap" style="padding-top:50px;">
   <div class="product-card">
     <div class="product-card-img">
       <img src="harcover-shop.jpg" alt="The Brave Little Human Hardcover Collection" />
@@ -629,7 +632,7 @@
 <hr class="section-divider" />
 
 <!-- PLUSH -->
-<div class="section-wrap" style="padding-top:50px;">
+<div id="plush" class="section-wrap" style="padding-top:50px;">
   <div class="product-card" style="flex-direction:row-reverse;">
     <div class="product-card-img">
       <img src="plush-shop.jpeg" alt="Little Dude and Bird plush toys" style="object-position: 55% center;" />
@@ -652,7 +655,7 @@
 <hr class="section-divider" />
 
 <!-- SMALL CARDS: PARENTING KIT + MERCH -->
-<div class="section-wrap" style="padding-top:50px;">
+<div id="resources" class="section-wrap" style="padding-top:50px;">
   <div class="small-product-grid">
 
     <!-- PARENTING SURVIVAL KIT -->
@@ -674,7 +677,7 @@
     </div>
 
     <!-- MERCH -->
-    <div class="small-card">
+    <div id="merch" class="small-card">
       <div class="small-card-img">
         <img src="merch2-shop.JPG" alt="Little Dude Merch" style="width:100%;height:100%;object-fit:cover;object-position:center 92%;" />
       </div>
