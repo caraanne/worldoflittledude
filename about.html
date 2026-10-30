@@ -552,8 +552,43 @@
     }
 
     /* ── RESPONSIVE ── */
+    
+    /* ── HAMBURGER ── */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 6px;
+    }
+    .hamburger span {
+      display: block;
+      width: 26px;
+      height: 3px;
+      background: #222;
+      border-radius: 2px;
+      transition: all 0.3s;
+    }
+
     @media (max-width: 768px) {
-      nav { padding: 0 20px; }
+      nav { padding: 0 20px; position: relative; flex-wrap: wrap; height: auto; min-height: 68px; }
+      .nav-logo { padding: 10px 0; }
+      .hamburger { display: flex; }
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        gap: 0;
+        background: white;
+        border-top: 1px solid var(--teal-blue);
+        padding: 10px 0 16px;
+      }
+      .nav-links.open { display: flex; }
+      .nav-links li { width: 100%; }
+      .nav-links a { display: block; padding: 10px 16px; font-size: 1rem; }
+      .nav-cta { border-radius: 0 !important; padding: 10px 16px !important; background: var(--coral) !important; }
       .page-hero { grid-template-columns: 1fr; padding: 44px 24px 0; }
       .page-hero h1 { font-size: 2rem; }
       .hero-image-col { display: none; }
@@ -593,7 +628,10 @@
   <a href="index.html" class="nav-logo">
     <img src="NEWlittledude-logo-TM-small.png" alt="Big World of Little Dude" />
   </a>
-  <ul class="nav-links">
+  <button class="hamburger" id="hamburger" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links" id="nav-links">
     <li><a href="index.html">Home</a></li>
     <li><a href="shop.html">Shop</a></li>
     <li><a href="about.html" class="active">About</a></li>
@@ -603,6 +641,11 @@
     <li><a href="shop.html" class="nav-cta">Shop Now</a></li>
   </ul>
 </nav>
+<script>
+  document.getElementById('hamburger').addEventListener('click', function() {
+    document.getElementById('nav-links').classList.toggle('open');
+  });
+</script>
 
 <!-- HERO -->
 <section class="page-hero">

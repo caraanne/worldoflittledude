@@ -70,6 +70,26 @@
     .footer-bottom a { color: rgba(255,255,255,0.6); text-decoration: none; }
     .footer-bottom a:hover { color: var(--teal-green); }
 
+    
+    /* ── HAMBURGER ── */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 6px;
+    }
+    .hamburger span {
+      display: block;
+      width: 26px;
+      height: 3px;
+      background: #222;
+      border-radius: 2px;
+      transition: all 0.3s;
+    }
+
     @media (max-width: 768px) {
       nav { padding: 0 24px; }
       .nav-links { display: none; }
@@ -103,7 +123,10 @@
 <!-- NAV -->
 <nav>
   <a href="index.html" class="nav-logo"><img src="NEWlittledude-logo-TM-small.png" alt="Big World of Little Dude" /></a>
-  <ul class="nav-links">
+  <button class="hamburger" id="hamburger" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links" id="nav-links">
     <li><a href="index.html">Home</a></li>
     <li><a href="shop.html">Shop</a></li>
     <li><a href="about.html">About</a></li>
@@ -116,6 +139,11 @@
     <span></span><span></span><span></span>
   </button>
 </nav>
+<script>
+  document.getElementById('hamburger').addEventListener('click', function() {
+    document.getElementById('nav-links').classList.toggle('open');
+  });
+</script>
 <div class="mobile-menu">
   <a href="index.html">Home</a>
   <a href="shop.html">Shop</a>
