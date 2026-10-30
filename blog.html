@@ -388,7 +388,11 @@
       .featured-grid { grid-template-columns: 1fr; }
       .explore-grid { grid-template-columns: 1fr; }
       .section-divider { margin: 0 24px; }
-      .newsletter-section { padding: 50px 24px; }
+      .newsletter-section { padding: 50px 24px; flex-direction: column; }
+      .newsletter-illus { display: none; }
+      .newsletter-inner { padding: 0; max-width: 100%; }
+      .page-hero h1 { white-space: normal; font-size: 1.8rem; }
+      .mobile-hide-illus { display: none !important; }
       .footer-grid { grid-template-columns: 1fr; }
     }
   </style>
@@ -694,7 +698,7 @@
 
 <!-- FOOTER -->
 <footer>
-  <img src="far-left-corner.png" alt="" style="position:absolute;bottom:0;right:0;width:200px;pointer-events:none;transform:scaleX(-1);" />
+  <img src="far-left-corner.png" alt="" class="mobile-hide-illus" style="position:absolute;bottom:0;right:0;width:200px;pointer-events:none;transform:scaleX(-1);" />
   <div class="footer-grid">
     <div class="footer-brand">
       <div class="footer-logo">
