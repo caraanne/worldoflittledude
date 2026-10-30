@@ -602,6 +602,8 @@
       .themes-section, .closing-section { padding: 50px 24px; }
       .illus-closing { display: none; }
       .footer-grid { grid-template-columns: 1fr; }
+      .mobile-hide-illus { display: none !important; }
+      .mobile-single-col { grid-template-columns: 1fr !important; gap: 30px !important; }
     }
   </style>
   <!-- Google Analytics -->
@@ -685,8 +687,8 @@
 
 <!-- MEET LITTLE DUDE -->
 <section style="background:var(--dusty-navy); padding:80px 40px 0; position:relative; overflow:hidden;">
-  <img src="illus-cara-littledude-hugging.png" alt="" style="position:absolute; bottom:0; left:40px; height:280px; object-fit:contain; pointer-events:none; z-index:2;" />
-  <div style="display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center; max-width:1060px; margin:0 auto;">
+  <img src="illus-cara-littledude-hugging.png" alt="" class="mobile-hide-illus" style="position:absolute; bottom:0; left:40px; height:280px; object-fit:contain; pointer-events:none; z-index:2;" />
+  <div class="mobile-single-col" style="display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center; max-width:1060px; margin:0 auto;">
     <div style="border-radius:20px; overflow:hidden; min-height:400px;">
       <img src="little-dude-about.jpeg" alt="Little Dude" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;min-height:400px;" />
     </div>
@@ -747,7 +749,7 @@
 
 <!-- FOOTER -->
 <footer>
-  <img src="far-left-corner.png" alt="" style="position:absolute;bottom:0;right:0;width:200px;pointer-events:none;transform:scaleX(-1);" />
+  <img src="far-left-corner.png" alt="" class="mobile-hide-illus" style="position:absolute;bottom:0;right:0;width:200px;pointer-events:none;transform:scaleX(-1);" />
   <div class="footer-grid">
     <div class="footer-brand">
       <div class="footer-logo">
