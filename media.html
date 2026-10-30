@@ -600,6 +600,9 @@
       .topic-list { grid-template-columns: 1fr; }
       .section-divider { margin: 0 24px; }
       .footer-grid { grid-template-columns: 1fr; }
+      .logo-row { flex-wrap: wrap; gap: 16px; }
+      .brand-logo { flex: 0 0 calc(33% - 16px); justify-content: center; }
+      .mobile-hide-illus { display: none !important; }
     }
   </style>
   <!-- Google Analytics -->
@@ -861,7 +864,7 @@
 
 <!-- FOOTER -->
 <footer>
-  <img src="far-left-corner.png" alt="" style="position:absolute;bottom:0;right:0;width:200px;pointer-events:none;transform:scaleX(-1);" />
+  <img src="far-left-corner.png" alt="" class="mobile-hide-illus" style="position:absolute;bottom:0;right:0;width:200px;pointer-events:none;transform:scaleX(-1);" />
   <div class="footer-grid">
     <div class="footer-brand">
       <div class="footer-logo">
