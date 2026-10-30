@@ -840,12 +840,13 @@
       .hero-image { display: none; }
       .hero-text { padding-bottom: 44px; }
       .products-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
-      .nine-grid { grid-template-columns: repeat(2, 1fr); }
+      .nine-grid { grid-template-columns: 1fr; }
       .story-inner, .about-inner { grid-template-columns: 1fr; }
       .story-img, .about-img { display: none; }
       .t-grid { grid-template-columns: 1fr; }
       .footer-grid { grid-template-columns: 1fr; }
       .products-section, .nine-section, .story-section, .about-section, .testimonials, .signup-section { padding: 50px 24px; }
+      .mobile-hide-illus { display: none !important; }
     }
   </style>
   <!-- Google Analytics -->
@@ -1041,7 +1042,7 @@
 
 <!-- LITTLE DUDE STORY -->
 <section class="story-section" style="position:relative; overflow:hidden;">
-  <img src="illus-littledude-schoolbook.png" alt="" style="position:absolute;bottom:0;right:40px;height:280px;object-fit:contain;pointer-events:none;" />
+  <img src="illus-littledude-schoolbook.png" alt="" class="mobile-hide-illus" style="position:absolute;bottom:0;right:40px;height:280px;object-fit:contain;pointer-events:none;" />
   <div class="story-inner">
     <div class="story-img">
       <img src="Little Dude.jpeg" alt="Little Dude" style="width:100%;max-width:460px;border-radius:20px;object-fit:cover;" />
@@ -1097,7 +1098,7 @@
 
 <!-- EMAIL SIGNUP -->
 <section class="signup-section" id="free-resource" style="position:relative; overflow:hidden;">
-  <img src="illus-littledude-glasses-talking.png" alt="" style="position:absolute;bottom:0;left:60px;height:300px;object-fit:contain;pointer-events:none;" />
+  <img src="illus-littledude-glasses-talking.png" alt="" class="mobile-hide-illus" style="position:absolute;bottom:0;left:60px;height:300px;object-fit:contain;pointer-events:none;" />
   <h2>Little Notes from Little Dude</h2>
   <p class="s-sub">Simple parenting ideas, free activities and Little Dude updates, straight to your inbox.</p>
   <p class="s-offer">Plus, get the FREE Little Dude Activity Pack when you sign up.<br/><span style="font-weight:400; font-size:0.88rem; opacity:0.85;">5 printable activities for little humans ages 3 to 8.</span></p>
@@ -1118,7 +1119,7 @@
 
 <!-- FOOTER -->
 <footer style="position:relative; overflow:hidden;">
-  <img src="far-left-corner.png" alt="" style="position:absolute;bottom:0;right:0;width:200px;pointer-events:none;transform:scaleX(-1);" />
+  <img src="far-left-corner.png" alt="" class="mobile-hide-illus" style="position:absolute;bottom:0;right:0;width:200px;pointer-events:none;transform:scaleX(-1);" />
   <div class="footer-grid">
     <div class="footer-brand">
       <div class="footer-logo">
