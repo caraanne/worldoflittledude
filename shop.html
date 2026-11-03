@@ -193,22 +193,21 @@
       border-radius: 20px;
       overflow: hidden;
       display: flex;
+      flex-direction: column;
       gap: 0;
     }
     .hero-product-img {
-      flex: 0 0 440px;
+      width: 100%;
       background: #f5efe8;
-      min-height: 380px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      max-height: 480px;
+      overflow: hidden;
       position: relative;
     }
     .hero-product-img img {
       width: 100%;
       height: 100%;
-      object-fit: contain;
-      object-position: center bottom;
+      object-fit: cover;
+      object-position: center 40%;
       display: block;
     }
     .hero-product-img .img-placeholder-label {
@@ -779,7 +778,7 @@
     <!-- MERCH -->
     <div id="merch" class="small-card">
       <div class="small-card-img">
-        <img src="Shop_mug.jpg" alt="Little Dude Merch" style="width:100%;height:100%;object-fit:cover;object-position:center 20%;" />
+        <img src="Shop_mug.jpg" alt="Little Dude Merch" style="width:100%;height:100%;object-fit:cover;object-position:center 75%;" />
       </div>
       <div class="small-card-body">
         <span class="section-label" style="background:rgba(244,73,51,0.1);color:var(--coral);">Merch</span>
