@@ -38,24 +38,12 @@
     <changefreq>yearly</changefreq>
   </url>
 
-  <!-- Blog posts (subfolder) -->
-  <url>
-    <loc>https://worldoflittledude.com/blog/therapy-dogs-in-schools/</loc>
-    <priority>0.7</priority>
-    <changefreq>yearly</changefreq>
-  </url>
-  <url>
-    <loc>https://worldoflittledude.com/blog/benefits-of-using-puppets-in-the-classroom/</loc>
-    <priority>0.7</priority>
-    <changefreq>yearly</changefreq>
-  </url>
-  <url>
-    <loc>https://worldoflittledude.com/blog/10-self-care-tips-for-teachers/</loc>
-    <priority>0.7</priority>
-    <changefreq>yearly</changefreq>
-  </url>
-
   <!-- Blog posts (html files) -->
+  <url>
+    <loc>https://worldoflittledude.com/blog-why-does-my-child-get-so-angry.html</loc>
+    <priority>0.7</priority>
+    <changefreq>yearly</changefreq>
+  </url>
   <url>
     <loc>https://worldoflittledude.com/blog-why-does-my-child-have-meltdowns.html</loc>
     <priority>0.7</priority>
