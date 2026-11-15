@@ -2,38 +2,34 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/x-icon" href="world-of-little-dude-favicon-maximized.ico" />
+  <link rel="icon" type="image/x-icon" href="humankind-heart-favicon.ico" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Parenting Blog | Tips for Kids Ages 3–8 | Big World of Little Dude</title>
-  <meta name="description" content="Practical parenting tips, children's social skills advice and simple strategies for raising kind, confident little humans ages 3–8. Written by Montessori-trained educator and children's author Cara Zelas." />
-  <meta name="keywords" content="parenting tips ages 3-7, children's social skills, raising kind kids, toddler behaviour tips, big feelings children, friendship skills kids, parenting blog, Montessori parenting, children's emotional development, kids emotional intelligence" />
-  <meta property="og:title" content="Parenting Blog | Big World of Little Dude" />
-  <meta property="og:description" content="Practical tips for raising kind, confident little humans ages 3–8. Written by Montessori educator and children's author Cara Zelas." />
-  <meta property="og:image" content="https://caraanne.github.io/worldoflittledude/illus-littledude-jumping.png" />
-  <meta property="og:url" content="https://worldoflittledude.com/blog.html" />
+  <title>For Educators Blog | humanKIND Classroom</title>
+  <meta name="description" content="Practical ideas, teaching tips, and early childhood insights for Pre-K through Grade 2 educators. From Cara Zelas, creator of humanKIND Classroom." />
+  <meta property="og:title" content="For Educators Blog | humanKIND Classroom" />
+  <meta property="og:description" content="Practical ideas, teaching tips, and early childhood insights for Pre-K through Grade 2 educators." />
+  <meta property="og:image" content="https://humankindclassroom.com/photo-kit-flatlay.jpg" />
+  <meta property="og:url" content="https://humankindclassroom.com/blog.html" />
   <meta property="og:type" content="website" />
-  <link rel="canonical" href="https://worldoflittledude.com/blog.html" />
+  <link rel="canonical" href="https://humankindclassroom.com/blog.html" />
   <meta name="twitter:card" content="summary_large_image" />
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Blog",
-    "name": "Big World of Little Dude — Parenting Blog",
-    "url": "https://worldoflittledude.com/blog.html",
-    "description": "Practical parenting tips, children's social skills advice and simple strategies for raising kind, confident little humans ages 3–8.",
-    "publisher": {
-      "@type": "Organization",
-      "name": "Big World of Little Dude",
-      "url": "https://worldoflittledude.com"
-    },
-    "author": {
-      "@type": "Person",
-      "name": "Cara Zelas",
-      "url": "https://worldoflittledude.com/about.html"
-    }
-  }
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "yphul0ji91");
   </script>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-J1B7JZ10RS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-J1B7JZ10RS');
+  </script>
   <style>
     :root {
       --cream: #FFFCED;
@@ -41,716 +37,429 @@
       --teal-green: #4AA694;
       --dusty-navy: #587792;
       --brown: #5C4226;
-      --golden: #FCB626;
       --mauve: #BF73A5;
-      --blush: #FBB5B3;
+      --golden: #FCB626;
       --coral: #F44933;
-      --olive: #BFB31A;
+      --blush: #FBB5B3;
       --terracotta: #D9856B;
       --periwinkle: #9CA7D1;
+      --olive: #BFB31A;
     }
 
-    html, body { overflow-x: hidden; }
+    html { scroll-behavior: smooth; }
     * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { overflow-x: hidden; font-family: 'Nunito Sans', sans-serif; background: var(--cream); color: var(--brown); line-height: 1.7; }
 
-    body {
-      font-family: 'Nunito Sans', sans-serif;
-      background: var(--cream);
-      color: #222;
-      font-size: 16px;
-      line-height: 1.65;
-    }
-
-    h1, h2, h3, h4 { font-family: 'Nunito', sans-serif; font-weight: 900; }
-    a { text-decoration: none; }
-
-    /* ── NAV ── */
-    nav {
+    /* ===== HEADER ===== */
+    header {
+      position: sticky; top: 0; z-index: 200;
       background: white;
-      border-bottom: 2px solid var(--teal-blue);
+      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
       padding: 0 40px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      height: 68px;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 96px;
     }
-    .nav-logo img { height: 64px; width: auto; display: block; }
-    .nav-links { display: flex; gap: 26px; list-style: none; align-items: center; }
-    .nav-links a { font-family: 'Nunito', sans-serif; font-weight: 700; font-size: 0.93rem; color: #222; transition: color 0.2s; }
-    .nav-links a:hover { color: var(--teal-green); }
-    .nav-links a.active { color: var(--teal-green); }
-    .nav-cta { background: var(--coral) !important; color: white !important; padding: 9px 22px; border-radius: 50px; transition: background 0.2s, transform 0.2s !important; }
-    .nav-cta:hover { background: #c5321e !important; transform: translateY(-1px); }
+    .header-logo img { height: 88px; width: auto; display: block; mix-blend-mode: multiply; }
+    nav { display: flex; align-items: center; gap: 24px; }
+    nav a { text-decoration: none; color: var(--brown); font-weight: 600; font-size: 0.87rem; transition: color 0.2s; white-space: nowrap; }
+    nav a:hover { color: var(--teal-green); }
+    .nav-cta { background: var(--teal-green); color: white !important; padding: 10px 18px; border-radius: 50px; font-weight: 700 !important; font-size: 0.84rem !important; }
+    .nav-cta:hover { background: var(--dusty-navy) !important; }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+    .hamburger span { display: block; width: 24px; height: 2px; background: var(--brown); border-radius: 2px; transition: all 0.25s; }
+    .mobile-nav { display: none; position: fixed; top: 96px; left: 0; right: 0; background: white; z-index: 199; padding: 16px 24px 24px; box-shadow: 0 8px 24px rgba(0,0,0,0.12); flex-direction: column; gap: 0; }
+    .mobile-nav.open { display: flex; }
+    .mobile-nav a { text-decoration: none; color: var(--brown); font-weight: 600; font-size: 1rem; padding: 14px 0; border-bottom: 1px solid #f0ede8; display: block; }
+    .mobile-nav a:last-child { border-bottom: none; }
+    .mobile-nav .nav-cta { margin-top: 12px; text-align: center; border-radius: 50px; padding: 14px 24px; }
 
-    /* ── BUTTONS ── */
-    .btn { display: inline-block; padding: 13px 30px; border-radius: 50px; font-family: 'Nunito', sans-serif; font-weight: 900; font-size: 0.95rem; transition: transform 0.2s, box-shadow 0.2s; cursor: pointer; border: none; text-align: center; }
-    .btn:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(0,0,0,0.15); }
-    .btn-teal { background: var(--teal-green); color: white; }
-    .btn-golden { background: var(--golden); color: var(--brown); }
-    .btn-coral { background: var(--coral); color: white; }
+    /* ===== LAYOUT ===== */
+    .wrap { max-width: 1100px; margin: 0 auto; padding: 0 40px; }
+    .section-label { display: block; font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.4px; color: var(--teal-green); margin-bottom: 12px; }
+    h1, h2, h3 { font-family: 'Nunito', sans-serif; font-weight: 900; line-height: 1.2; }
+    h1 { font-size: clamp(1.8rem, 4.5vw, 3.2rem); color: var(--dusty-navy); margin-bottom: 22px; }
+    h2 { font-size: clamp(1.5rem, 3.2vw, 2.4rem); color: var(--dusty-navy); margin-bottom: 18px; }
+    h3 { font-size: 1.1rem; color: var(--brown); margin-bottom: 8px; }
+    p { font-size: 1rem; color: #555; margin-bottom: 16px; }
 
-    /* ── HERO ── */
-    .page-hero {
-      background: #BFB31A;
-      padding: 0;
-      overflow: hidden;
+    /* ===== HERO ===== */
+    .blog-hero {
+      background: white;
+      padding: 72px 0 56px;
+      border-bottom: 1px solid #eee;
     }
-    .page-hero-inner {
-      max-width: 1060px;
-      margin: 0 auto;
-      padding: 0 40px;
-      display: flex;
-      align-items: stretch;
-      min-height: 240px;
-    }
-    .page-hero-content {
-      flex: 1;
-      padding: 44px 0 36px;
-    }
-    .page-hero .eyebrow {
-      font-family: 'Nunito', sans-serif;
-      font-weight: 700;
-      font-size: 0.82rem;
-      color: rgba(0,0,0,0.45);
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-bottom: 10px;
-    }
-    .page-hero h1 { font-size: 2.2rem; color: var(--dusty-navy); margin-bottom: 10px; line-height: 1.1; white-space: nowrap; }
-    .page-hero .tagline { font-family: 'Nunito', sans-serif; font-weight: 700; font-size: 0.95rem; color: var(--dusty-navy); margin-bottom: 12px; }
-    .page-hero p { font-size: 0.95rem; color: rgba(0,0,0,0.65); max-width: 480px; line-height: 1.7; }
-    .page-hero .audience { font-family: 'Nunito', sans-serif; font-weight: 700; font-size: 0.8rem; color: rgba(0,0,0,0.4); margin-top: 12px; text-transform: uppercase; letter-spacing: 0.5px; }
-    .page-hero-illus { flex: 0 0 280px; display: flex; align-items: flex-end; justify-content: center; }
-    .page-hero-illus img { height: 240px; object-fit: contain; display: block; }
+    .blog-hero h1 { margin-bottom: 16px; }
+    .blog-hero p { font-size: 1.1rem; max-width: 580px; color: #666; margin: 0; }
 
-    /* ── SECTION WRAPPER ── */
-    .section-wrap { max-width: 1060px; margin: 0 auto; padding: 72px 40px; }
-    .section-header { text-align: center; margin-bottom: 40px; }
-    .section-header h2 { font-size: 1.8rem; color: var(--teal-green); margin-bottom: 8px; }
-    .section-header p { font-size: 0.97rem; color: #555; max-width: 520px; margin: 0 auto; }
+    /* ===== BLOG GRID ===== */
+    .blog-section { padding: 72px 0; }
 
-    /* ── SECTION LABEL ── */
-    .section-label {
-      display: inline-block;
-      font-family: 'Nunito', sans-serif;
-      font-weight: 700;
-      font-size: 0.75rem;
-      padding: 4px 14px;
-      border-radius: 50px;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      margin-bottom: 12px;
-    }
-
-    /* ── CATEGORY CARDS ── */
-    .category-section { background: white; padding: 72px 40px; }
-    .category-inner { max-width: 1060px; margin: 0 auto; }
-    .category-grid {
+    .blog-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-      margin-top: 40px;
+      gap: 32px;
+      margin-top: 48px;
     }
-    .cat-card {
-      border-radius: 18px;
-      padding: 28px 26px;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      transition: transform 0.2s, box-shadow 0.2s;
-      cursor: pointer;
-    }
-    .cat-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,0.1); }
-    .cat-icon { width: 95px; height: 95px; border-radius: 50%; overflow: hidden; margin-bottom: 10px; }
-    .cat-icon img { width: 100%; height: 100%; object-fit: cover; display: block; }
-    .cat-card h3 { font-size: 1rem; line-height: 1.3; }
-    .cat-card p { font-size: 0.87rem; line-height: 1.6; opacity: 0.85; }
 
-    /* Light tints of brand palette */
-    .cat-feelings { background: rgba(244,73,51,0.1); }
-    .cat-feelings h3 { color: var(--coral); }
-    .cat-feelings p { color: #5c2a22; }
-
-    .cat-friendship { background: rgba(126,190,201,0.15); }
-    .cat-friendship h3 { color: var(--dusty-navy); }
-    .cat-friendship p { color: #3a636e; }
-
-    .cat-confidence { background: rgba(252,182,38,0.15); }
-    .cat-confidence h3 { color: var(--brown); }
-    .cat-confidence p { color: var(--brown); }
-
-    .cat-kindness { background: rgba(191,115,165,0.12); }
-    .cat-kindness h3 { color: var(--mauve); }
-    .cat-kindness p { color: #6b3558; }
-
-    .cat-parenting { background: rgba(88,119,146,0.12); }
-    .cat-parenting h3 { color: var(--dusty-navy); }
-    .cat-parenting p { color: var(--dusty-navy); }
-
-    .cat-play { background: rgba(74,166,148,0.12); }
-    .cat-play h3 { color: var(--teal-green); }
-    .cat-play p { color: #2d7a68; }
-
-    /* ── FEATURED ARTICLES ── */
-    .featured-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 24px;
-    }
-    .featured-card {
+    .blog-card {
       background: white;
       border-radius: 20px;
       overflow: hidden;
-      box-shadow: 0 4px 18px rgba(0,0,0,0.07);
+      box-shadow: 0 2px 16px rgba(0,0,0,0.06);
       transition: transform 0.2s, box-shadow 0.2s;
       display: flex;
       flex-direction: column;
     }
-    .featured-card:hover { transform: translateY(-3px); box-shadow: 0 8px 28px rgba(0,0,0,0.11); }
-    .featured-card-img {
-      height: 180px;
-      background: var(--cream);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-    }
-    .featured-card-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
-    .featured-card-img-placeholder {
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(135deg, var(--teal-blue) 0%, var(--teal-green) 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .featured-card-img-placeholder svg { width: 48px; height: 48px; opacity: 0.4; color: white; }
-    .featured-card-body { padding: 24px 26px 28px; flex: 1; display: flex; flex-direction: column; gap: 10px; }
-    .featured-card-body h3 { font-size: 1.05rem; color: #222; line-height: 1.4; flex: 1; }
-    .featured-card-body p { font-size: 0.88rem; color: #555; line-height: 1.65; }
-    .read-more {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      font-family: 'Nunito', sans-serif;
-      font-weight: 700;
-      font-size: 0.88rem;
-      color: var(--teal-green);
-      margin-top: 4px;
-      transition: gap 0.2s;
-    }
-    .read-more:hover { gap: 10px; }
 
-    /* category tag colours */
-    .tag { font-family: 'Nunito', sans-serif; font-weight: 700; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.4px; padding: 3px 10px; border-radius: 50px; display: inline-block; }
-    .tag-feelings { background: #FFF0EE; color: var(--coral); }
-    .tag-friendship { background: #EBF7F9; color: #4a8fa0; }
-    .tag-confidence { background: #FFF8E8; color: var(--brown); }
-    .tag-kindness { background: #FAF0F6; color: var(--mauve); }
-    .tag-parenting { background: #EEF3F7; color: var(--dusty-navy); }
-    .tag-play { background: #EBF7F4; color: #2d7a68; }
+    .blog-card:hover { transform: translateY(-4px); box-shadow: 0 8px 28px rgba(0,0,0,0.1); }
 
-    /* ── DIVIDER ── */
-    .section-divider { border: none; border-top: 2px solid rgba(126,190,201,0.2); margin: 0 40px; }
+    .blog-card-color {
+      height: 8px;
+    }
 
-    /* ── EXPLORE MORE GRID ── */
-    .explore-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-    }
-    .explore-card {
-      background: white;
-      border-radius: 16px;
-      padding: 22px 24px;
-      box-shadow: 0 3px 12px rgba(0,0,0,0.06);
-      transition: transform 0.2s, box-shadow 0.2s;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-    .explore-card:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(0,0,0,0.1); }
-    .explore-card h4 { font-size: 0.95rem; color: #222; line-height: 1.4; flex: 1; }
-
-    /* ── NEWSLETTER ── */
-    .newsletter-section {
-      background: var(--periwinkle);
-      padding: 0 40px;
-      display: flex;
-      align-items: stretch;
-      min-height: 200px;
-      overflow: hidden;
-    }
-    .newsletter-illus { flex-shrink: 0; display: flex; align-items: flex-end; padding-left: 20px; }
-    .newsletter-illus img { height: 200px; object-fit: contain; display: block; }
-    .newsletter-inner { flex: 1; padding: 36px 0 36px 40px; max-width: 640px; }
-    .newsletter-section h2 { color: white; font-size: 1.5rem; margin-bottom: 8px; }
-    .newsletter-section .newsletter-desc { color: rgba(255,255,255,0.9); font-size: 0.92rem; margin-bottom: 20px; line-height: 1.65; }
-    .newsletter-form { display: flex; gap: 12px; flex-wrap: wrap; }
-    .newsletter-form input {
+    .blog-card-body {
+      padding: 28px 28px 24px;
       flex: 1;
-      min-width: 150px;
-      padding: 12px 18px;
-      border-radius: 50px;
-      border: none;
-      font-family: 'Nunito Sans', sans-serif;
-      font-size: 0.92rem;
-      color: #222;
-      outline: none;
-    }
-    .newsletter-form input::placeholder { color: #aaa; }
-    .newsletter-form button {
-      background: var(--golden);
-      color: var(--brown);
-      border: none;
-      padding: 12px 26px;
-      border-radius: 50px;
-      font-family: 'Nunito', sans-serif;
-      font-weight: 900;
-      font-size: 0.9rem;
-      cursor: pointer;
-      white-space: nowrap;
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-    .newsletter-form button:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(0,0,0,0.15); }
-    .newsletter-note { font-size: 0.76rem; color: rgba(255,255,255,0.55); margin-top: 12px; }
-
-    /* ── EDUCATORS BANNER ── */
-    .edu-banner { background: var(--olive); padding: 56px 40px; text-align: center; }
-    .edu-tag { display: inline-block; background: var(--teal-green); color: white; font-family: 'Nunito', sans-serif; font-weight: 700; font-size: 0.8rem; padding: 4px 14px; border-radius: 50px; margin-bottom: 14px; letter-spacing: 0.5px; text-transform: uppercase; }
-    .edu-banner h2 { font-size: 1.9rem; color: var(--dusty-navy); margin-bottom: 10px; }
-    .edu-banner p { color: #222; font-size: 1rem; margin-bottom: 24px; max-width: 680px; margin-left: auto; margin-right: auto; }
-
-    /* ── FOOTER ── */
-    footer { background: var(--cream); border-top: 2px solid var(--teal-blue); padding: 46px 40px 24px; position: relative; overflow: hidden; }
-    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; max-width: 960px; margin: 0 auto 32px; }
-    .footer-logo img { height: 56px; margin-bottom: 12px; }
-    .footer-brand p { font-size: 0.86rem; color: #222; line-height: 1.65; margin-bottom: 12px; }
-    .footer-brand .tagline { font-family: 'Nunito', sans-serif; font-weight: 900; color: var(--teal-green); font-size: 0.9rem; }
-    .social-row { display: flex; gap: 10px; margin-top: 14px; }
-    .social-row a { width: 38px; height: 38px; border-radius: 50%; background: var(--teal-blue); display: flex; align-items: center; justify-content: center; transition: background 0.2s, transform 0.2s; }
-    .social-row a svg { width: 18px; height: 18px; fill: white; }
-    .social-row a:hover { background: var(--teal-green); transform: translateY(-2px); }
-    .footer-col h4 { font-size: 0.82rem; color: #222; text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 14px; }
-    .footer-col ul { list-style: none; }
-    .footer-col li { margin-bottom: 7px; }
-    .footer-col a { color: #222; font-size: 0.86rem; transition: color 0.2s; }
-    .footer-col a:hover { color: var(--teal-green); }
-    .footer-bottom { text-align: center; border-top: 1px solid rgba(126,190,201,0.3); padding-top: 20px; font-size: 0.8rem; color: #222; }
-
-    /* ── RESPONSIVE ── */
-    
-    /* ── HAMBURGER ── */
-    .hamburger {
-      display: none;
+      display: flex;
       flex-direction: column;
-      gap: 5px;
-      cursor: pointer;
-      background: none;
-      border: none;
-      padding: 6px;
-    }
-    .hamburger span {
-      display: block;
-      width: 26px;
-      height: 3px;
-      background: #222;
-      border-radius: 2px;
-      transition: all 0.3s;
     }
 
+    .blog-tag {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      color: var(--teal-green);
+      margin-bottom: 10px;
+    }
+
+    .blog-card h3 {
+      font-family: 'Nunito', sans-serif;
+      font-weight: 800;
+      font-size: 1.05rem;
+      color: var(--dusty-navy);
+      line-height: 1.4;
+      margin-bottom: 10px;
+    }
+
+    .blog-card p {
+      font-size: 0.92rem;
+      color: #666;
+      line-height: 1.6;
+      flex: 1;
+      margin-bottom: 20px;
+    }
+
+    .blog-card a.read-more {
+      display: inline-block;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--teal-green);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .blog-card a.read-more:hover { color: var(--dusty-navy); }
+
+    .coming-soon-badge {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      background: #f0f0f0;
+      color: #999;
+      padding: 4px 12px;
+      border-radius: 20px;
+    }
+
+    /* ===== CTA BANNER ===== */
+    .blog-cta {
+      background: var(--teal-green);
+      padding: 64px 0;
+      text-align: center;
+    }
+    .blog-cta h2 { color: white; margin-bottom: 14px; }
+    .blog-cta p { color: rgba(255,255,255,0.88); max-width: 520px; margin: 0 auto 32px; }
+    .btn { display: inline-block; padding: 15px 32px; border-radius: 50px; font-weight: 800; font-size: 0.97rem; text-decoration: none; transition: transform 0.2s, box-shadow 0.2s; }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-golden { background: var(--golden); color: var(--brown); box-shadow: 0 4px 14px rgba(252,182,38,0.35); }
+
+    /* ===== FOOTER ===== */
+    footer { background: var(--dusty-navy); padding: 56px 0 32px; }
+    .footer-inner { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 48px; margin-bottom: 40px; }
+    .footer-logo img { height: 72px; mix-blend-mode: lighten; margin-bottom: 12px; }
+    .footer-logo p { color: rgba(255,255,255,0.7); font-size: 0.9rem; }
+    .footer-col h4 { font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; color: rgba(255,255,255,0.5); margin-bottom: 14px; }
+    .footer-col a { display: block; color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.9rem; margin-bottom: 8px; }
+    .footer-col a:hover { color: white; }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; }
+    .footer-bottom p { color: rgba(255,255,255,0.4); font-size: 0.8rem; margin: 0; }
+
+    /* ===== RESPONSIVE ===== */
     @media (max-width: 768px) {
-      nav { padding: 0 20px; position: relative; flex-wrap: wrap; height: auto; min-height: 68px; }
-      .nav-logo { padding: 10px 0; }
+      header { padding: 0 20px; }
+      nav { display: none; }
       .hamburger { display: flex; }
-      .nav-links {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        gap: 0;
-        background: white;
-        border-top: 1px solid var(--teal-blue);
-        padding: 10px 0 16px;
-      }
-      .nav-links.open { display: flex; }
-      .nav-links li { width: 100%; }
-      .nav-links a { display: block; padding: 10px 16px; font-size: 1rem; }
-      .nav-cta { border-radius: 0 !important; padding: 10px 16px !important; background: var(--coral) !important; }
-      .page-hero { padding: 0; }
-      .page-hero-inner { padding: 50px 24px 44px; flex-direction: column; }
-      .page-hero-illus { display: none; }
-      .page-hero h1 { font-size: 2rem; }
-      .category-section { padding: 50px 24px; }
-      .category-grid { grid-template-columns: 1fr 1fr; }
-      .section-wrap { padding: 50px 24px; }
-      .featured-grid { grid-template-columns: 1fr; }
-      .explore-grid { grid-template-columns: 1fr; }
-      .section-divider { margin: 0 24px; }
-      .newsletter-section { padding: 50px 24px; flex-direction: column; }
-      .newsletter-illus { display: none; }
-      .newsletter-inner { padding: 0; max-width: 100%; }
-      .page-hero h1 { white-space: normal; font-size: 1.8rem; }
-      .mobile-hide-illus { display: none !important; }
-      .footer-grid { grid-template-columns: 1fr; }
+      .wrap { padding: 0 20px; }
+      .blog-grid { grid-template-columns: 1fr; gap: 20px; }
+      .footer-inner { grid-template-columns: 1fr; gap: 24px; }
     }
   </style>
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-C3BXSB6CBM"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-C3BXSB6CBM');
-  </script>
-  <!-- Microsoft Clarity -->
-  <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "z5fmwuvxla");
-  </script>
 </head>
 <body>
 
-<!-- NAV -->
-<nav>
-  <a href="index.html" class="nav-logo">
-    <img src="NEWlittledude-logo-TM-small.png" alt="Big World of Little Dude" />
+<!-- HEADER -->
+<header>
+  <a href="index.html" class="header-logo">
+    <img src="NEWHumanKIND-logo-TM.png" alt="humanKIND Classroom" />
   </a>
-  <button class="hamburger" id="hamburger" aria-label="Open menu">
+  <nav>
+    <a href="index.html#how-it-works">How It Works</a>
+    <a href="index.html#free-program">Free Program</a>
+    <a href="kit.html">The Kit</a>
+    <a href="schools.html">For Schools</a>
+    <a href="about.html">About Cara</a>
+    <a href="index.html#free-program" class="nav-cta">Apply for Free Access</a>
+  </nav>
+  <button class="hamburger" onclick="toggleMenu()" aria-label="Open menu">
     <span></span><span></span><span></span>
   </button>
-  <ul class="nav-links" id="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="shop.html">Shop</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="media.html">Media</a></li>
-    <li><a href="blog.html" class="active">Blog</a></li>
-    <li><a href="contact.html">Contact</a></li>
-    <li><a href="shop.html" class="nav-cta">Shop Now</a></li>
-  </ul>
-</nav>
-<script>
-  document.getElementById('hamburger').addEventListener('click', function() {
-    document.getElementById('nav-links').classList.toggle('open');
-  });
-</script>
+</header>
+
+<div class="mobile-nav" id="mobileNav">
+  <a href="index.html#how-it-works" onclick="closeMenu()">How It Works</a>
+  <a href="index.html#free-program" onclick="closeMenu()">Free Program</a>
+  <a href="kit.html" onclick="closeMenu()">The Kit</a>
+  <a href="schools.html" onclick="closeMenu()">For Schools</a>
+  <a href="about.html">About Cara</a>
+  <a href="index.html#free-program" class="nav-cta" onclick="closeMenu()">Apply for Free Access</a>
+</div>
 
 <!-- HERO -->
-<section class="page-hero">
-  <div class="page-hero-inner">
-  <div class="page-hero-content">
-    <p class="eyebrow">Big World of Little Dude · Blog</p>
-    <h1>Little Humans. Big Questions.</h1>
-    <p class="tagline">Because parenting doesn't come with a manual.</p>
-    <p>Raising little humans comes with plenty of questions. Here you'll find practical ideas, helpful advice and simple ways to support your child as they navigate their big world.</p>
-    <p class="audience">For parents of children ages 3 to 8</p>
-  </div>
-  <div class="page-hero-illus">
-    <img src="illus-littledude-bird-highfive.png" alt="" />
-  </div>
+<section class="blog-hero">
+  <div class="wrap">
+    <span class="section-label">For Educators</span>
+    <h1>Ideas, insights, and practical tools<br>for early childhood teachers.</h1>
+    <p>Written by Cara Zelas — Montessori-trained early childhood educator, children's book author, and creator of humanKIND Classroom.</p>
   </div>
 </section>
 
-<!-- CATEGORIES -->
-<section class="category-section">
-  <div class="category-inner">
-    <div class="section-header">
-      <h2>What Can We Help You With?</h2>
+<!-- BLOG POSTS -->
+<section class="blog-section">
+  <div class="wrap">
+    <span class="section-label">Latest Articles</span>
+    <div class="blog-grid">
+
+      <div class="blog-card">
+        <div class="blog-card-color" style="background: var(--teal-green);"></div>
+        <div class="blog-card-body">
+          <span class="blog-tag">Classroom Community</span>
+          <h3>How to Build Classroom Community in the First Week of Pre-K</h3>
+          <p>The first week is not about academics. It is about one thing only: helping every child feel like they belong. Here are seven practical strategies that work from day one.</p>
+          <a href="blog-classroom-community-first-week.html" class="read-more">Read article &rarr;</a>
+        </div>
+      </div>
+
+      <div class="blog-card">
+        <div class="blog-card-color" style="background: var(--golden);"></div>
+        <div class="blog-card-body">
+          <span class="blog-tag">Morning Meeting</span>
+          <h3>Morning Meeting Ideas for Pre-K and Kindergarten That Take 10 Minutes</h3>
+          <p>You do not need 30 minutes to build meaningful classroom community. Ten focused, consistent minutes every morning will do more for your class culture than any single big event.</p>
+          <a href="blog-morning-meeting-10-minutes.html" class="read-more">Read article &rarr;</a>
+        </div>
+      </div>
+
+      <div class="blog-card">
+        <div class="blog-card-color" style="background: var(--coral);"></div>
+        <div class="blog-card-body">
+          <span class="blog-tag">Big Feelings</span>
+          <h3>How to Respond When a Child Has a Meltdown (Without Making It Worse)</h3>
+          <p>A meltdown is not a behavior problem. It is a brain problem. And the way you respond in that moment can either shorten the storm or make it last twice as long.</p>
+          <a href="blog-meltdown-response.html" class="read-more">Read article &rarr;</a>
+        </div>
+      </div>
+
+      <div class="blog-card">
+        <div class="blog-card-color" style="background: var(--teal-blue);"></div>
+        <div class="blog-card-body">
+          <span class="blog-tag">Friendship</span>
+          <h3>How to Help the Child Who Has No Friends in Your Class</h3>
+          <p>There is one in almost every class. A child who is always a little bit outside the group. Here are gentle, practical strategies to help them find real connection.</p>
+          <a href="blog-child-no-friends.html" class="read-more">Read article &rarr;</a>
+        </div>
+      </div>
+
+      <div class="blog-card">
+        <div class="blog-card-color" style="background: var(--mauve);"></div>
+        <div class="blog-card-body">
+          <span class="blog-tag">Kindness</span>
+          <h3>How to Teach Kindness in the Classroom (Not Just Talk About It)</h3>
+          <p>Telling children to be kind does not make them kind. Here are six practical approaches that build kindness through real experience, not lectures.</p>
+          <a href="blog-teach-kindness-not-just-talk.html" class="read-more">Read article &rarr;</a>
+        </div>
+      </div>
+
+      <div class="blog-card">
+        <div class="blog-card-color" style="background: var(--dusty-navy);"></div>
+        <div class="blog-card-body">
+          <span class="blog-tag">Conflict Resolution</span>
+          <h3>What to Say When Two Kids Won't Stop Fighting Over a Toy</h3>
+          <p>A step-by-step teacher script for turning toy conflicts into genuine learning moments. Every conflict is a free lesson in problem-solving.</p>
+          <a href="blog-toy-fight-script.html" class="read-more">Read article &rarr;</a>
+        </div>
+      </div>
+
+      <div class="blog-card">
+        <div class="blog-card-color" style="background: var(--periwinkle);"></div>
+        <div class="blog-card-body">
+          <span class="blog-tag">Books</span>
+          <h3>5 Picture Books That Teach Friendship Skills to Young Children</h3>
+          <p>The right book at the right moment opens conversations that lessons never could. These five books have started some of the most meaningful discussions Cara has ever had with young children.</p>
+          <a href="blog-picture-books-friendship.html" class="read-more">Read article &rarr;</a>
+        </div>
+      </div>
+
+      <div class="blog-card">
+        <div class="blog-card-color" style="background: var(--dusty-navy);"></div>
+        <div class="blog-card-body">
+          <span class="blog-tag">Social Skills Programs</span>
+          <h3>Best Social Skills Programs for Preschool and Pre-K: A Teacher's Comparison</h3>
+          <p>Second Step, Al's Pals, PATHS, Incredible Years, humanKIND Classroom -- a plain-language comparison of what each program is, who it is for, and what makes each approach different.</p>
+          <a href="blog-preschool-social-skills-programs.html" class="read-more">Read article &rarr;</a>
+        </div>
+      </div>
+
+      <div class="blog-card">
+        <div class="blog-card-color" style="background: var(--teal-green);"></div>
+        <div class="blog-card-body">
+          <span class="blog-tag">About Our Approach</span>
+          <h3>What Is the humanKIND Method? A Simple Approach to Teaching Social Skills</h3>
+          <p>Five steps. One lesson at a time. Here is how the humanKIND Method works, why it was designed this way, and what makes it different from other programs.</p>
+          <a href="blog-humankind-method.html" class="read-more">Read article &rarr;</a>
+        </div>
+      </div>
+
+      <div class="blog-card">
+        <div class="blog-card-color" style="background: var(--golden);"></div>
+        <div class="blog-card-body">
+          <span class="blog-tag">Social Skills</span>
+          <h3>Social Skills Activities for Preschoolers: 10 Ideas That Actually Work</h3>
+          <p>Ten tried-and-tested activities for Pre-K and kindergarten that build real social skills through daily practice, not one-off lessons.</p>
+          <a href="blog-social-skills-activities-preschoolers.html" class="read-more">Read article &rarr;</a>
+        </div>
+      </div>
+
+      <div class="blog-card">
+        <div class="blog-card-color" style="background: var(--periwinkle);"></div>
+        <div class="blog-card-body">
+          <span class="blog-tag">Classroom Management</span>
+          <h3>How to Help a Child Who Struggles with Transitions at School</h3>
+          <p>Transitions are some of the hardest moments of the preschool day. Here is what is happening in the brain, and seven strategies that actually help.</p>
+          <a href="blog-child-struggles-transitions.html" class="read-more">Read article &rarr;</a>
+        </div>
+      </div>
+
+      <div class="blog-card">
+        <div class="blog-card-color" style="background: var(--teal-blue);"></div>
+        <div class="blog-card-body">
+          <span class="blog-tag">Morning Meeting</span>
+          <h3>50+ Morning Meeting Questions for Pre-K, Kindergarten and Grade 1</h3>
+          <p>A big bank of morning meeting questions organized by theme. Feelings, friendship, would-you-rather, creativity, community, and more.</p>
+          <a href="blog-morning-meeting-questions.html" class="read-more">Read article &rarr;</a>
+        </div>
+      </div>
+
+      <div class="blog-card">
+        <div class="blog-card-color" style="background: var(--mauve);"></div>
+        <div class="blog-card-body">
+          <span class="blog-tag">Books</span>
+          <h3>7 Picture Books About Kindness for the Early Childhood Classroom</h3>
+          <p>Seven beautifully chosen picture books about kindness, each with a discussion question and a classroom connection to try after the read-aloud.</p>
+          <a href="blog-picture-books-kindness.html" class="read-more">Read article &rarr;</a>
+        </div>
+      </div>
+
+      <div class="blog-card">
+        <div class="blog-card-color" style="background: var(--coral);"></div>
+        <div class="blog-card-body">
+          <span class="blog-tag">Friendship and Belonging</span>
+          <h3>How to Help a Child Who Feels Lonely at School</h3>
+          <p>Some children feel lonely even in a full classroom. Here is how to recognise it, understand what is behind it, and gently help them find their place.</p>
+          <a href="blog-child-feels-lonely.html" class="read-more">Read article &rarr;</a>
+        </div>
+      </div>
+
+      <div class="blog-card">
+        <div class="blog-card-color" style="background: var(--dusty-navy);"></div>
+        <div class="blog-card-body">
+          <span class="blog-tag">Child Wellbeing</span>
+          <h3>How to Help a Child Who Is Being Bullied at School</h3>
+          <p>How to identify bullying in an early childhood setting, respond effectively, and build a classroom culture where bullying has less room to take hold.</p>
+          <a href="blog-child-being-bullied.html" class="read-more">Read article &rarr;</a>
+        </div>
+      </div>
+
+      <div class="blog-card">
+        <div class="blog-card-color" style="background: var(--teal-green);"></div>
+        <div class="blog-card-body">
+          <span class="blog-tag">Social Skills</span>
+          <h3>Small Group Social Skills Activities for Preschoolers</h3>
+          <p>Eight activities designed specifically for groups of three to five preschoolers. More practice, less watching. The skills that stick are the ones that get used.</p>
+          <a href="blog-small-group-activities-preschoolers.html" class="read-more">Read article &rarr;</a>
+        </div>
+      </div>
+
     </div>
-    <div class="category-grid">
-
-      <div class="cat-card cat-feelings">
-        <div class="cat-icon"><img src="01-Big-Feelings-and-Behavior.png" alt="Big Feelings & Behavior" /></div>
-        <h3>Big Feelings & Behavior</h3>
-        <p>Big emotions, frustration, self-regulation and those moments when everything feels a little too much.</p>
-      </div>
-
-      <div class="cat-card cat-friendship">
-        <div class="cat-icon"><img src="02-Friendship-and-Social-Skills.png" alt="Friendship & Social Skills" /></div>
-        <h3>Friendship & Social Skills</h3>
-        <p>Making friends, being a friend, sharing, communicating and navigating tricky social moments.</p>
-      </div>
-
-      <div class="cat-card cat-confidence">
-        <div class="cat-icon"><img src="03-Confidence-and-Resilience.png" alt="Confidence & Resilience" /></div>
-        <h3>Confidence & Resilience</h3>
-        <p>Trying new things, handling setbacks and learning to keep going when something feels hard.</p>
-      </div>
-
-      <div class="cat-card cat-kindness">
-        <div class="cat-icon"><img src="04-Kindness-and-Connection.png" alt="Kindness & Connection" /></div>
-        <h3>Kindness & Connection</h3>
-        <p>Kindness, empathy, respect, boundaries and learning how our words and actions affect others.</p>
-      </div>
-
-      <div class="cat-card cat-parenting">
-        <div class="cat-icon"><img src="05-Everyday-Parenting.png" alt="Everyday Parenting" /></div>
-        <h3>Everyday Parenting</h3>
-        <p>Practical ideas for the everyday challenges that come with raising little humans.</p>
-      </div>
-
-      <div class="cat-card cat-play">
-        <div class="cat-icon"><img src="06-Play-and-Learning.png" alt="Play & Learning" /></div>
-        <h3>Play & Learning</h3>
-        <p>Activities, books and playful ways to explore big life skills together.</p>
-      </div>
-
-    </div>
   </div>
 </section>
 
-<hr class="section-divider" />
-
-<!-- FEATURED ARTICLES -->
-<div class="section-wrap">
-  <div class="section-header">
-    <span class="section-label" style="background:var(--golden);color:var(--brown);">Featured Articles</span>
-    <h2>A little help for some of childhood's big moments.</h2>
+<!-- CTA -->
+<section class="blog-cta">
+  <div class="wrap">
+    <h2>Want the full classroom program?</h2>
+    <p>The humanKIND Classroom Kit gives you everything you need to build social skills into your school day -- stories, activities, lesson plans, and more.</p>
+    <a href="kit.html" class="btn btn-golden">Explore the Classroom Kit &rarr;</a>
   </div>
-
-  <div class="featured-grid">
-
-    <a href="blog/therapy-dogs-in-schools/" class="featured-card">
-      <div class="featured-card-img">
-        <img src="therapydog_school_blog.png" alt="Therapy dogs in schools" />
-      </div>
-      <div class="featured-card-body">
-        <span class="tag tag-play">About Little Dude</span>
-        <h3>Therapy Dogs in Schools: Why They Make Such a Difference</h3>
-        <p>How therapy dogs like Little Dude help children build confidence, reduce anxiety and develop the social skills they need to thrive.</p>
-        <span class="read-more">Read More &rarr;</span>
-      </div>
-    </a>
-
-    <a href="blog-why-does-my-child-have-meltdowns.html" class="featured-card">
-      <div class="featured-card-img">
-        <img src="meltown_blog.png" alt="Why does my child have meltdowns" style="object-position: center 20%;" />
-      </div>
-      <div class="featured-card-body">
-        <span class="tag tag-feelings">Big Feelings &amp; Behavior</span>
-        <h3>Why Does My Child Have Meltdowns? 7 Ways to Help</h3>
-        <p>Meltdowns are exhausting for everyone. Here's what's really happening in your child's brain, and 7 simple ways to help them through it.</p>
-        <span class="read-more">Read More &rarr;</span>
-      </div>
-    </a>
-
-    <a href="blog/benefits-of-using-puppets-in-the-classroom/" class="featured-card">
-      <div class="featured-card-img">
-        <img src="puppet-blog.jpg" alt="Puppets in the classroom" style="object-position: center 45%;" />
-      </div>
-      <div class="featured-card-body">
-        <span class="tag tag-play">Play & Learning</span>
-        <h3>The Benefits of Using Puppets in the Classroom</h3>
-        <p>Discover why puppets can be such a powerful tool for helping young children communicate, express themselves and learn through play.</p>
-        <span class="read-more">Read More &rarr;</span>
-      </div>
-    </a>
-
-    <a href="blog-child-being-left-out-or-bullied.html" class="featured-card">
-      <div class="featured-card-img">
-        <img src="bullied_blog.png" alt="Child being left out or bullied" />
-      </div>
-      <div class="featured-card-body">
-        <span class="tag tag-friendship">Friendship &amp; Social Skills</span>
-        <h3>What to Do When Your Child Is Being Left Out or Bullied</h3>
-        <p>Practical ways to listen, respond, and support your child through friendship difficulties, exclusion, and bullying at ages 3&ndash;7.</p>
-        <span class="read-more">Read More &rarr;</span>
-      </div>
-    </a>
-
-  </div>
-</div>
-
-<hr class="section-divider" />
-
-<!-- EXPLORE MORE -->
-<div class="section-wrap">
-  <div class="section-header">
-    <span class="section-label" style="background:var(--teal-blue);color:white;">Explore More</span>
-    <h2>More ideas for the big job of raising little humans.</h2>
-  </div>
-
-  <div class="explore-grid">
-
-    <a href="blog/10-self-care-tips-for-teachers/" class="explore-card">
-      <span class="tag tag-parenting">For Educators</span>
-      <h4>10 Self-Care Tips for Teachers (That Actually Work)</h4>
-      <span class="read-more">Read More &rarr;</span>
-    </a>
-
-    <a href="blog-why-does-my-child-get-so-angry.html" class="explore-card">
-      <span class="tag tag-feelings">Big Feelings &amp; Behavior</span>
-      <h4>Why Does My Child Get So Angry? (And What to Do About It)</h4>
-      <span class="read-more">Read More &rarr;</span>
-    </a>
-
-    <a href="blog-how-to-help-a-shy-child-make-friends.html" class="explore-card">
-      <span class="tag tag-friendship">Friendship &amp; Social Skills</span>
-      <h4>How to Help a Shy Child Make Friends: 7 Gentle Ways</h4>
-      <span class="read-more">Read More &rarr;</span>
-    </a>
-
-    <a href="blog-why-wont-my-4-year-old-listen.html" class="explore-card">
-      <span class="tag tag-behavior">Everyday Parenting</span>
-      <h4>Why Won't My 4-Year-Old Listen? 7 Things to Try Instead of Yelling</h4>
-      <span class="read-more">Read More &rarr;</span>
-    </a>
-
-    <a href="blog-why-wont-my-child-share.html" class="explore-card">
-      <span class="tag tag-friendship">Social Skills &amp; Friendship</span>
-      <h4>Why Won't My Child Share? 7 Ways to Teach Sharing Without Forcing It</h4>
-      <span class="read-more">Read More &rarr;</span>
-    </a>
-
-    <a href="blog-kids-wont-listen.html" class="explore-card">
-      <span class="tag tag-behavior">Everyday Parenting</span>
-      <h4>What to Do When Kids Won't Listen</h4>
-      <span class="read-more">Read More &rarr;</span>
-    </a>
-
-    <a href="blog-screen-time-for-kids.html" class="explore-card">
-      <span class="tag tag-play">Parenting Tips &amp; Play</span>
-      <h4>Screen Time for Kids Ages 3&ndash;7: How Much Is Too Much?</h4>
-      <span class="read-more">Read More &rarr;</span>
-    </a>
-
-    <a href="blog-how-to-explain-death-to-a-child.html" class="explore-card">
-      <span class="tag tag-behavior">Difficult Conversations</span>
-      <h4>How to Explain Death to a Young Child (Ages 3&ndash;7)</h4>
-      <span class="read-more">Read More &rarr;</span>
-    </a>
-
-    <a href="blog-raise-confident-child.html" class="explore-card">
-      <span class="tag tag-confidence">Confidence & Resilience</span>
-      <h4>How to Raise a Confident Child</h4>
-      <span class="read-more">Read More &rarr;</span>
-    </a>
-
-    <a href="blog-activities-kids-3-7.html" class="explore-card">
-      <span class="tag tag-play">Play & Learning</span>
-      <h4>Activities for Kids Ages 3–7 at Home (That Actually Work)</h4>
-      <span class="read-more">Read More &rarr;</span>
-    </a>
-
-    <a href="blog-talk-to-kids-about-emotions.html" class="explore-card">
-      <span class="tag tag-behavior">Big Feelings & Behavior</span>
-      <h4>How to Talk to Kids About Emotions</h4>
-      <span class="read-more">Read More &rarr;</span>
-    </a>
-
-    <a href="blog-best-childrens-books-ages-3-5.html" class="explore-card">
-      <span class="tag tag-kindness">Books & Reading</span>
-      <h4>Best Children's Books for Ages 3–5</h4>
-      <span class="read-more">Read More &rarr;</span>
-    </a>
-
-    <a href="blog-what-makes-little-dude-different.html" class="explore-card">
-      <span class="tag tag-kindness">About Little Dude</span>
-      <h4>More Than Children's Books: What Makes Big World of Little Dude Different</h4>
-      <span class="read-more">Read More &rarr;</span>
-    </a>
-
-
-  </div>
-</div>
-
-<!-- NEWSLETTER -->
-<section class="newsletter-section">
-  <div class="newsletter-illus">
-    <img src="illus-littledude-glasses-talking.png" alt="" />
-  </div>
-  <div class="newsletter-inner">
-    <h2>Little Notes from Little Dude</h2>
-    <p class="newsletter-desc">Simple parenting ideas, conversation starters, free activities and Little Dude updates, straight to your inbox.</p>
-    <!-- Hidden systeme.io form -->
-    <iframe name="systeme-hidden-blog" style="display:none;" title=""></iframe>
-    <form id="systeme-real-blog" method="post" action="https://systeme.io/embedded/45749676/subscription" target="systeme-hidden-blog" style="display:none;">
-      <input type="text" id="sys-blog-name" name="first_name" />
-      <input type="email" id="sys-blog-email" name="email" />
-      <button type="submit"></button>
-    </form>
-    <!-- Beautiful visible form -->
-    <form class="newsletter-form" id="display-blog-form" onsubmit="submitBlog(event)">
-      <input type="text" id="blog-name" placeholder="First name" required />
-      <input type="email" id="blog-email" placeholder="Email address" required />
-      <button type="submit">Get the Free Pack!</button>
-    </form>
-    <p id="blog-success" style="display:none;color:white;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.95rem;margin-top:12px;">🎉 You're in! Check your inbox for your free Activity Pack.</p>
-    <script>
-      function submitBlog(e) {
-        e.preventDefault();
-        document.getElementById('sys-blog-name').value = document.getElementById('blog-name').value;
-        document.getElementById('sys-blog-email').value = document.getElementById('blog-email').value;
-        document.getElementById('systeme-real-blog').submit();
-        document.getElementById('display-blog-form').style.display = 'none';
-        document.getElementById('blog-success').style.display = 'block';
-      }
-    </script>
-    <p class="newsletter-note">No spam, ever. Just good stuff for little humans and the grown-ups who love them.</p>
-  </div>
-</section>
-
-<!-- EDUCATORS BANNER -->
-<section class="edu-banner">
-  <span class="edu-tag">Are you an educator?</span>
-  <h2>Little Dude goes to school, too.</h2>
-  <p>Meet humanKIND Classroom, a nine-theme classroom program helping young children build social skills through stories, play and simple routines.</p>
-  <a href="https://humankindclassroom.com" target="_blank" class="btn btn-teal">Visit humanKIND Classroom</a>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <img src="far-left-corner.png" alt="" class="mobile-hide-illus" style="position:absolute;bottom:0;right:0;width:200px;pointer-events:none;transform:scaleX(-1);" />
-  <div class="footer-grid">
-    <div class="footer-brand">
+  <div class="wrap">
+    <div class="footer-inner">
       <div class="footer-logo">
-        <img src="NEWlittledude-logo-TM-small.png" alt="Big World of Little Dude" />
+        <img src="NEWHumanKIND-logo-TM.png" alt="humanKIND Classroom" />
+        <p>Story-based social skills curriculum for Pre-K through Second Grade.</p>
       </div>
-      <p>Created by Cara Zelas, early childhood educator, Montessori teacher and children's author. For little humans ages 3 to 8 and the grown-ups helping them navigate their big world.</p>
-      <p class="tagline">Be kind to all kinds.</p>
-      <div class="social-row">
-        <a href="https://www.instagram.com/worldoflittledude" target="_blank" aria-label="Instagram">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-        </a>
-        <a href="https://www.linkedin.com/in/carazelas" target="_blank" aria-label="LinkedIn">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-        </a>
-        <a href="https://humankindclassroom.com" target="_blank" aria-label="humanKIND Classroom">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
-        </a>
+      <div class="footer-col">
+        <h4>Navigate</h4>
+        <a href="index.html#how-it-works">How It Works</a>
+        <a href="index.html#free-program">Free Program</a>
+        <a href="kit.html">The Kit</a>
+        <a href="schools.html">For Schools</a>
+        <a href="about.html">About Cara</a>
+        <a href="blog.html">Blog</a>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <a href="https://www.instagram.com/worldoflittledude" target="_blank">Instagram</a>
+        <a href="https://www.linkedin.com/in/carazelas/" target="_blank">LinkedIn</a>
+        <a href="http://www.worldoflittledude.com/" target="_blank">Big World of Little Dude</a>
+        <a href="humanKIND-Classroom-Privacy-Policy.pdf" target="_blank">Privacy Policy</a>
+        <a href="humanKIND-Classroom-Terms-and-Conditions.pdf" target="_blank">Terms &amp; Conditions</a>
+        <a href="humanKIND-Classroom-Refund-Policy.pdf" target="_blank">Refund Policy</a>
       </div>
     </div>
-    <div class="footer-col">
-      <h4>Explore</h4>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="shop.html">Shop</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="media.html">Media</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+    <div class="footer-bottom">
+      <p>&copy; 2026 humanKIND Classroom. All rights reserved.</p>
     </div>
-    <div class="footer-col">
-      <h4>Shop</h4>
-      <ul>
-        <li><a href="shop.html#books">The Books</a></li>
-        <li><a href="shop.html#plush">Little Dude & Bird</a></li>
-        <li><a href="https://big-world-of-little-dude.printify.me/" target="_blank">Merch</a></li>
-        <li><a href="https://worldoflittledude.systeme.io/survival-kit" target="_blank">Parenting Survival Kit</a></li>
-        <li><a href="https://humankindclassroom.com" target="_blank">humanKIND Classroom</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <p>© 2026 Big World of Little Dude. Created by Cara Zelas. &nbsp;·&nbsp; <a href="privacy-policy.html" style="color:var(--dusty-navy);">Privacy Policy</a> &nbsp;·&nbsp; <a href="contact.html" style="color:var(--dusty-navy);">Contact</a></p>
   </div>
 </footer>
+
+<script>
+  function toggleMenu() { document.getElementById('mobileNav').classList.toggle('open'); }
+  function closeMenu() { document.getElementById('mobileNav').classList.remove('open'); }
+</script>
 
 </body>
 </html>
